@@ -1,0 +1,19 @@
+---
+title: Consideraciones
+description: A tener en cuenta al momento de programar tu bot
+tags:
+ - guias
+ - cli
+---
+
+# Guias
+
+Extras include other integrations that aren't relevant to style or customization,
+but can further enhance your documentation pages. Currently, we have support
+for adding interactive quizzes.
+
+ - [Quizzes](example-quiz)
+
+
+Would you like to see another question type, or another kind of extra? Please
+[open an issue])({{ site.repo }}/issues/new).

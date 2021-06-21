@@ -1,0 +1,31 @@
+- title: Documentacion
+  url: docs
+  links:
+    - title: "Instalacion"
+      url: "docs/installation"
+      children:
+        - title: Windows
+          url: "docs/installation/windows"
+        - title: MacOS
+          url: "docs/installation/macos"
+        - title: Linux
+          url: "docs/installation/linux"
+    - title: "Guias"
+      url: "docs/guides"
+      children:
+        - title: Linea de comandos
+          url: "docs/guides/cli"
+        - title: Generar plantilla
+          url: "docs/guides/cli#template"
+        - title: Compilar bot
+          url: "docs/guides/cli#compilation"
+        - title: Iniciar juego
+          url: "docs/guides/cli#play"
+        - title: Estructuras
+          url: "docs/guides/structs"
+        - title: Consideraciones
+          url: "docs/guides/considerations"
+    - title: "Arena Brawl"
+      url: "event"
+    - title: "Noticias"
+      url: "news"
