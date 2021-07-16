@@ -7468,7 +7468,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-    background-color: #403f4c!important
+    background-color: #000!important
 }
 
 a.bg-dark:hover,
@@ -7611,7 +7611,7 @@ button.bg-dark:focus {
 }
 
 .border-dark {
-    border-color: #403f4c!important
+    border-color: #000!important
 }
 
 .border-white {
@@ -10598,7 +10598,7 @@ a.text-light:focus {
 }
 
 .text-dark {
-    color: #403f4c!important
+    color: #000!important
 }
 
 a.text-dark:hover,
