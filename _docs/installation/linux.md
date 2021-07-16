@@ -1,15 +1,15 @@
 ---
-title: Instalacion Linux
-description: Getting started with Docsy Jekyll
+title: Instalación Linux Ubuntu 20.04 LTS
+description: Instalar EVAB en Linux Ubuntu 20.04 LTS
 ---
 # Instalación en Linux
 
 ## Requisitos:
 
 - SFML Versión 2.5.1
-- Compilador C++
+- Compilador C++ 17
 
-## Instalación de SFML
+## Instalando requisitos
 
 - Abre una terminal y ejecutar el siguiente comando:
   ```bash
@@ -17,12 +17,12 @@ description: Getting started with Docsy Jekyll
   ```
 - Si no tuvieras instalado el compilador MinGW(g++), abre un terminal y ejecuta el siguiente comando:
   ```bash
-  $ sudo apt install mingw-w64
+  $ sudo apt install g++
   ```
 
 ## Ejecución de EVAB
 
-Ahora puedes [descargar](../../assets/EVAB/ARENA_BRAWL_ACM_UCSP_LINUX.zip) el "Entorno de Videojuego Arena Brawl (EVAB)" y dentro de la carpeta ARENA_BRAWL_ACM_UCSP ejecuta el siguiente comando:
+Ahora puedes [descargar](../../assets/EVAB/EVAB_linux_ubuntu2004lts.rar) el "Entorno de Videojuego Arena Brawl (EVAB)" y dentro de la carpeta ARENA_BRAWL_ACM_UCSP ejecuta el siguiente comando:
 
   ```bash
   $ ./evab jugar
