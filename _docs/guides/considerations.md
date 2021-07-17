@@ -2,7 +2,7 @@
 title: Consideraciones
 description: A tener en cuenta al momento de programar tu bot
 tags:
- - guias
+ - guide
  - cli
 ---
 
