@@ -9,7 +9,7 @@ tags:
 ## Requisitos:
 
 - SFML Versión 2.5.1
-- CMake Versión 3.19.4 para adelante
+- CMake Versión 3.15 mínimo
 - Compilador MinGW (g++)
 
 ## Instalación de SFML
