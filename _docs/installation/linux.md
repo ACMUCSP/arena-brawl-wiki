@@ -7,22 +7,24 @@ description: Instalar EVAB en Linux Ubuntu 20.04 LTS
 ## Requisitos:
 
 - SFML Versión 2.5.1
-- Compilador C++ 17
+- gcc 9.3.0
+
+Si no tienes instalado los requisitos o tienes diferentes versiones continua con la seccion "Instalando requisitos". Sino ve directo a la sección de "Ejecución de EVAB".
 
 ## Instalando requisitos
 
-- Abre una terminal y ejecutar el siguiente comando:
+- Instalando SFML: Abre una terminal y ejecutar el siguiente comando:
   ```bash
   $ sudo apt-get install libsfml-dev
   ```
-- Si no tuvieras instalado el compilador MinGW(g++), abre un terminal y ejecuta el siguiente comando:
+- Instalando gcc: Abre una terminal y ejecutar el siguiente comando:
   ```bash
   $ sudo apt install g++
   ```
 
 ## Ejecución de EVAB
 
-Ahora puedes [descargar](../../assets/EVAB/EVAB_linux_ubuntu2004lts.rar) el "Entorno de Videojuego Arena Brawl (EVAB)" y dentro de la carpeta ARENA_BRAWL_ACM_UCSP ejecuta el siguiente comando:
+Ahora [descarga](../../assets/EVAB/EVAB_linux_ubuntu2004lts.zip) el "Entorno de Videojuego Arena Brawl (EVAB)" y dentro de la carpeta ARENA_BRAWL_ACM_UCSP ejecuta el siguiente comando:
 
   ```bash
   $ ./evab jugar
