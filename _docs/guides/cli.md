@@ -2,7 +2,7 @@
 title: Linea de comandos
 description: Comandos disponibles en EVAB
 tags:
- - guias
+ - guide
  - cli
 ---
 

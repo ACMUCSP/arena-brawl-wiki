@@ -1,18 +1,21 @@
 ---
 title: Instalacion
 description: Como instalar EVAB de acuerdo a tu sistema operativo
-tags:
- - instalacion
+index: True
 ---
 
-# Instalacion
+# Instalación
 
-Extras include other integrations that aren't relevant to style or customization,
-but can further enhance your documentation pages. Currently, we have support
-for adding interactive quizzes.
+Guías para instalar Arena Brawl de acuerdo al sistema operativo
 
- - [Quizzes](example-quiz)
-
-
-Would you like to see another question type, or another kind of extra? Please
-[open an issue])({{ site.repo }}/issues/new).
+<div class="section-index">
+    <hr class="panel-line">
+    {% for post in site.docs %}
+	{% if post.tags contains "installation" %}
+	<div class="entry">
+    <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+    <p>{{ post.description }}</p>
+    </div>
+	{% endif %}
+	{% endfor %}
+</div>

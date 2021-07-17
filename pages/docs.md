@@ -4,15 +4,18 @@ title: Documentation
 permalink: /docs/
 ---
 
-# Documentacion
+# Documentación
 
-Bienvenidos a la documentacion de {{ site.title }}! Aqui encontraras las secciones:
+Bienvenidos a la documentación de {{ site.title }}! Aqui encontraras las secciones:
 
 <div class="section-index">
     <hr class="panel-line">
     {% for post in site.docs %}
+	{% if post.index %}
     <div class="entry">
     <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
     <p>{{ post.description }}</p>
-    </div>{% endfor %}
+	</div>
+	{% endif %}
+    {% endfor %}
 </div>

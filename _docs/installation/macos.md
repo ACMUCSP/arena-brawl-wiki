@@ -1,6 +1,8 @@
 ---
 title: Instalacion macOS
 description: Instalar EVAB en macOS Big Sur
+tags:
+  - installation
 ---
 # Instalación en macOS
 
@@ -14,15 +16,15 @@ estas se instalan automáticamente junto a Xcode.
 
 ## Instalación de SFML
 
-Abre una terminal y ejecutar el siguiente comando:
+Abrir una terminal y ejecutar el siguiente comando:
 ```bash
 $ brew install sfml
 ```
 
 ## Ejecución de EVAB
 
-Ahora, descarga el EVAB desde AQUI y dentro de la carpeta EVAB ejecuta el siguiente comando:
+Ahora, descargar el EVAB desde AQUI y dentro de la carpeta EVAB ejecutar el siguiente comando:
   ```bash
-  $ ./evab jugar
+  $ ./evab
   ```
-El juego iniciará si sfml se instaló correctamente.
+Se mostrará un mensaje de ayuda si sfml se instaló correctamente.

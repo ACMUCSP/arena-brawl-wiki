@@ -2,7 +2,7 @@
 title: Estructuras
 description: Datos que usaras para construir tu bot
 tags:
- - guias
+ - guide
  - cli
 ---
 

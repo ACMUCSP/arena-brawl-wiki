@@ -1,6 +1,8 @@
 ---
 title: Instalacion Windows
 description: Getting started with Docsy Jekyll
+tags:
+  - installation
 ---
 # Instalación en Windows
 
