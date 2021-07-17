@@ -6,10 +6,10 @@ description: Instalar EVAB en Linux Ubuntu 20.04 LTS
 
 ## Requisitos:
 
-- SFML Versión 2.5.1
+- SFML versión 2.5.1
 - gcc 9.3.0
 
-Si no tienes instalado los requisitos o tienes diferentes versiones continua con la seccion "Instalando requisitos". Sino ve directo a la sección de "Ejecución de EVAB".
+Si no tienes instalado los requisitos o tienes versiones diferentes continúa con la sección "Instalando requisitos", sino ve directo a la sección de "Ejecución de EVAB".
 
 ## Instalando requisitos
 
@@ -29,4 +29,4 @@ Ahora [descarga](../../assets/EVAB/EVAB_linux_ubuntu2004lts.zip) el "Entorno de 
   ```bash
   $ ./evab jugar
   ```
-EVAB te solicitará que eligas la cantidad de bots, coloca una cantidad entre 2 y 10. Ahora deberías ver varios bots combatiendo, son bots por defecto. Al final verás el cuadro de resultados. Con todo esto ya tenemos listo EVAB, ahora ve a "Guías" para que empieces a programar tu primer bot.
+EVAB te solicitará que elijas la cantidad de bots, coloca una cantidad entre 2 y 10. Ahora deberías ver varios bots combatiendo, son bots por defecto. Al final verás el cuadro de resultados. Con todo esto ya tenemos listo EVAB, ahora ve a "Guías" para que empieces a programar tu primer bot.
