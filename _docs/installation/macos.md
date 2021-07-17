@@ -1,16 +1,16 @@
 ---
 title: Instalacion macOS
-description: Instalar EVAB en ordenadores macOS
+description: Instalar EVAB en macOS Big Sur
 ---
 # Instalación en macOS
 
 ## Requisitos:
 
-- Apple clang, version 12.0.0 o posterior.
-- [Homebrew](https://brew.sh/)
+- Apple clang, versión 12.0.0 o posterior.
+- [Homebrew](https://brew.sh/), versión
 
 Es recomendable instalar las herramientas de linea de comandos de macOS,
-estas se instalan junto a Xcode.
+estas se instalan automáticamente junto a Xcode.
 
 ## Instalación de SFML
 
@@ -25,4 +25,4 @@ Ahora, descarga el EVAB desde AQUI y dentro de la carpeta EVAB ejecuta el siguie
   ```bash
   $ ./evab jugar
   ```
-El juego iniciara si sfml se instalo correctamente.
+El juego iniciará si sfml se instaló correctamente.
