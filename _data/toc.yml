@@ -15,11 +15,11 @@
         - title: Linea de comandos
           url: "docs/guides/cli"
         - title: Generar plantilla
-          url: "docs/guides/cli#template"
+          url: "docs/guides/cli#generar-plantilla"
         - title: Compilar bot
-          url: "docs/guides/cli#compilation"
+          url: "docs/guides/cli#compilar-bot"
         - title: Iniciar juego
-          url: "docs/guides/cli#play"
+          url: "docs/guides/cli#iniciar-juego"
         - title: Estructuras
           url: "docs/guides/structs"
         - title: Consideraciones
