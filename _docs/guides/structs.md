@@ -84,7 +84,7 @@ El llamado del segundo método y el tercer método poseen un conflicto mutuo, lo
     /*tu algoritmo*/
     evab::BotHandler::onBotActionRotation(42.f);
     evab::BotHandler::onBotActionAttack(1);//1 o true activará la acción actual
-    /*necesitas cambiar tu accion!!!*/
+    /*necesitas cambiar tu acción!!!*/
     evab::BotHandler::onBotActionAttack(0);//0 o false desactivará la acción actual
     evab::BotHandler::onBotActionRotation(10.f);
     evab::BotHandler::onBotActionMoving(1);//Cambio de acción atacar -> moverse
