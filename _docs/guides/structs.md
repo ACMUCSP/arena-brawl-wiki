@@ -9,15 +9,15 @@ tags:
 
 # Estructuras de la plantilla de tu bot
 
-Para que tu implementación pueda interactuar con el Arena Brawl necesitarás saber usar la plantilla que provee EVAB, la cual se puede generar usando el comando `./evab plantilla`.
-El uso de la plantilla generada por el programa es obligatoria ya que contiene funciones indispensables para la comunicación entre tu bot y el Arena Brawl.
+Para que tu implementación pueda interactuar con el EVAB necesitarás saber usar la plantilla que provee, la cual se puede generar usando el comando `./evab plantilla`.
+El uso de la plantilla generada por el programa es obligatoria ya que contiene funciones indispensables para la comunicación entre tu bot y el EVAB.
 
 - Primero necesitarás un nombre para tu bot y este puede ser brindado usando la variable global `name` y guardándola en la clase estática `evab::BotHandler`. Esta acción solo puede realizarse antes de llamar a la función `evab::BotHandler::stablishConnectionWithServer()`.
 ```cpp
   const std::string name = "EL_NOMBRE_DE_TU_BOT";
   evab::EvabBotPackage package;
   int main() {
-    evab::BotHandler::setName(name);//Guarda el nombre de tu bot para toda la partida del Arena Brawl.
+    evab::BotHandler::setName(name);//Guarda el nombre de tu bot para toda la partida.
     (...)
 ```
 
