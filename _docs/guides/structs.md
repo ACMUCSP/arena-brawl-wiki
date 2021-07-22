@@ -12,7 +12,7 @@ tags:
 Para que tu implementación pueda interactuar con el Arena Brawl necesitarás saber usar la plantilla que provee EVAB, la cual se puede generar usando el comando `./evab plantilla`.
 El uso de la plantilla generada por el programa es obligatoria ya que contiene funciones indispensables para la comunicación entre tu bot y el Arena Brawl.
 
-- Primero necesitarás un nombre para tu bot y este puede ser brindado usando la variable global `name` y guardándolo en la clase estática `evab::BotHandler`. Esta acción solo puede realizarse antes del siguiente punto.
+- Primero necesitarás un nombre para tu bot y este puede ser brindado usando la variable global `name` y guardándola en la clase estática `evab::BotHandler`. Esta acción solo puede realizarse antes de llamar a la función `evab::BotHandler::stablishConnectionWithServer()`.
 ```cpp
   const std::string name = "EL_NOMBRE_DE_TU_BOT";
   evab::EvabBotPackage package;
@@ -21,7 +21,7 @@ El uso de la plantilla generada por el programa es obligatoria ya que contiene f
     (...)
 ```
 
-- La segunda función llamada `evab::BotHandler::stablishConnectionWithServer()` hará que tu bot se conecte al servidor del Arena Brawl. Este proceso demora 5 segundos aporximadamente por lo que puedes aprovechar ese tiempo para realizar cualquier precálculo que necesites.
+- La segunda función llamada `evab::BotHandler::stablishConnectionWithServer()` hará que tu bot se conecte al servidor del EVAB. Este proceso demora 5 segundos aproximadamente por lo que puedes aprovechar ese tiempo para realizar cualquier precálculo que necesites.
 El siguiente trozo de código te muestra donde hacer ese precálculo:
 
 ```cpp
@@ -35,7 +35,7 @@ El siguiente trozo de código te muestra donde hacer ese precálculo:
       ejemplo:
       for(auto& player : evab::BotHandler::getGameData().players){
         if(player.player_id != evab::BotHandler::getMyId()){
-          //calcular el jugador mas cercano para dispararle primero
+          //calcular el jugador más cercano para dispararle primero
         }
       }
     */
@@ -43,14 +43,14 @@ El siguiente trozo de código te muestra donde hacer ese precálculo:
     (...)
 ```
 
-El método `evab::BotHandler::getGameData()` retorna una estructura de tipo `EvabBotPackage`, la cual posee los datos de respuesta por parte del servidor de Arena Brawl que usarás para realizar tus cálculos.
+El método `evab::BotHandler::getGameData()` retorna una estructura de tipo `EvabBotPackage`, la cual posee los datos de respuesta por parte del servidor del EVAB que usarás para realizar tus cálculos. Todos los atributos de `EvabBotPackage` y `ElementInfo` son públicos.
 No necesitas instanciar un objeto `EvabBotPackage` ya que `evab::BotHandler::getGameData()` devuelve una referencia de su atributo de tipo `EvabBotPackage` y se actualiza constantemente con el método `evab::BotHandler::onBotGameplay()`.
 
 ```cpp
   struct EvabBotPackage{
-    //Informacion actualizada de todos los jugadores en la partida.
+    //Información actualizada de todos los jugadores en la partida.
     std::vector<ElementInfo> players;
-    //Informacion actualizada de todas las balas existentes en el mapa.
+    //Información actualizada de todas las balas existentes en el mapa.
     std::vector<ElementInfo> bullets;
     //Atributo que verifica si tu bot está vivo o muerto(no necesitas usarlo directamente).
     bool isAlive;
@@ -59,7 +59,7 @@ No necesitas instanciar un objeto `EvabBotPackage` ya que `evab::BotHandler::get
   };
   ///////////////////////////////////////////
   struct ElementInfo{
-    //Valores de posición y ángulo de direccion (sexagesimal) de tu bot.
+    //Valores de posición y ángulo de dirección (sexagesimal) de tu bot.
     float x_position, y_position, direction;
     int player_id;
     /*Identificador del jugador en la partida
@@ -97,7 +97,7 @@ Al finalizar la iteración de bucle, los datos que se hayan actualizado como la 
 
 ## Consideraciones
 
-- Si tu implementación es muy lenta en cada iteración de bucle es más probable que un enemigo te mate o que el mismo servidor te expulse por estar AFK.
+- Si tu implementación es muy lenta en cada iteración de bucle es más probable que un enemigo te mate o que el servidor del EVAB te expulse de la partida por considerarte inactivo y no realizar acciones.
 - Los atributos de las estructuras `EvabBotPackage` y `ElementInfo` no se guardan de manera local y se actualizan en cada iteración de bucle, lo que quiere decir que no vale la pena tratar de modificarlas ya que el servidor solo actualizará la dirección y/o la autorización de moverse o de disparar que `evab::BotHandler` le envie.
 - Las balas que tendrás son limitadas asi que aprovéchalas bien.
-- En el día del evento se darán restricciones para el límite de memoria usado por tu bot, así que ten cuidado si en una iteración de bucle tu código puede llegar a sobrepasar ese límite de memoria permitida o sino el servidor te expulsará en plena partida.
+- En el día del evento se darán restricciones para el límite de memoria usado por tu bot, así que ten cuidado si en una iteración de bucle tu código puede llegar a sobrepasar ese límite de memoria permitida o sino el proceso de tu bot será detenido y tu implementación no podrá controlarlo.
