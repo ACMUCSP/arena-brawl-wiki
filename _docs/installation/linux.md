@@ -9,7 +9,7 @@ tags:
 ## Requisitos:
 
 - SFML versión 2.5.1
-- gcc 9.3.0
+- gcc >= 9.3.0
 
 Si no tienes instalado los requisitos o tienes versiones diferentes continúa con la sección "Instalando requisitos", sino ve directo a la sección de "Ejecución de EVAB".
 
@@ -17,7 +17,7 @@ Si no tienes instalado los requisitos o tienes versiones diferentes continúa co
 
 - Instalando SFML: Abre una terminal y ejecutar el siguiente comando:
   ```bash
-  $ sudo apt-get install libsfml-dev
+  $ sudo apt install libsfml-dev
   ```
 - Instalando gcc: Abre una terminal y ejecutar el siguiente comando:
   ```bash
@@ -26,7 +26,7 @@ Si no tienes instalado los requisitos o tienes versiones diferentes continúa co
 
 ## Ejecución de EVAB
 
-Ahora [descarga](../../assets/EVAB/EVAB_linux_ubuntu2004lts.zip) el "Entorno de Videojuego Arena Brawl (EVAB)" y dentro de la carpeta ARENA_BRAWL_ACM_UCSP ejecuta el siguiente comando:
+Ahora [descarga](../../assets/EVAB/EVAB_linux_ubuntu&Arch.zip) el "Entorno de Videojuego Arena Brawl (EVAB)" y dentro de la carpeta ARENA_BRAWL_ACM_UCSP ejecuta el siguiente comando:
 
   ```bash
   $ ./evab jugar
