@@ -1,5 +1,5 @@
 ---
-title: Instalación Arch Linux
+title: Arch Linux
 description: Instalar EVAB en Arch Linux 
 tags:
   - installation

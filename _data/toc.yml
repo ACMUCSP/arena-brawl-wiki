@@ -7,8 +7,10 @@
           url: "docs/installation/windows"
         - title: MacOS
           url: "docs/installation/macos"
-        - title: Linux
-          url: "docs/installation/linux"
+        - title: Ubuntu
+          url: "docs/installation/ubuntu"
+        - title: Arch Linux
+          url: "docs/installation/arch"
     - title: "Guías"
       url: "docs/guides"
       children:
@@ -20,11 +22,11 @@
           url: "docs/guides/cli#compilar-bot"
         - title: Iniciar juego
           url: "docs/guides/cli#iniciar-juego"
-        - title: Estructuras
+        - title: Estructuras y Funciones
           url: "docs/guides/structs"
-        - title: Consideraciones
+        - title: FAQ
           url: "docs/guides/considerations"
-    - title: "Arena Brawl"
+    - title: "Competencia"
       url: "event"
     - title: "Noticias"
       url: "news"
