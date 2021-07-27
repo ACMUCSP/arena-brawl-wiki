@@ -36,6 +36,7 @@ tags:
 
 EVAB es portable, así que no requiere un procedimiento de instalación pero sí debe tomar en cuenta que los archivos de los bots participantes
 se compilan cuando ejecute EVAB, lo cual hace que deba especificar las carpetas include y lib de su SFML instalado para hacerlo. 
+Para descargar EVAB use el siguiente [enlace](../../assets/EVAB/EVAB_Win64.zip).
 En la raíz de EVAB encontrará un archivo llamado `CompilationSettings.conf` con dos unicos campos: `INCLUDE_PATH` y `LIB_PATH`,
 en los cuales deberá colocar las rutas a las carpetas include y lib de su SFML instalado si es que se instaló en otra ruta que no sea `C://Program-Files(x86)/SFML`. 
 Ambas carpetas las encontrará en la raíz de su SFML y señaladas con los nombres include y lib respectivamente.
