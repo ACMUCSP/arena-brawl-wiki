@@ -1,10 +1,10 @@
 ---
-title: Instalación Linux Ubuntu 20.04 LTS
-description: Instalar EVAB en Linux Ubuntu 20.04 LTS
+title: Linux Ubuntu
+description: Instalar EVAB en Linux Ubuntu
 tags:
   - installation
 ---
-# Instalación en Linux
+# Instalación en Linux Ubuntu
 
 ## Requisitos:
 

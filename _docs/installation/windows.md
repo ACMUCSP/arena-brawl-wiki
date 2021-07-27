@@ -1,6 +1,6 @@
 ---
-title: Instalacion Windows
-description: Getting started with Docsy Jekyll
+title: Windows
+description:  Instalar EVAB en Windows
 tags:
   - installation
 ---
@@ -8,8 +8,8 @@ tags:
 
 ## Requisitos:
 
-- SFML Versión 2.5.1
-- CMake Versión 3.15 mínimo
+- SFML, Versión 2.5.1
+- CMake, Versión 3.15 o posterior
 - Compilador MinGW (g++)
 
 ## Instalación de SFML

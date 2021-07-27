@@ -1,13 +1,13 @@
 ---
-title: Estructuras
-description: Datos que usaras para construir tu bot
+title: Estructuras y funciones
+description: Datos y funciones que usarás para construir tu bot
 tags:
  - guide
  - template
  - cli
 ---
 
-# Estructuras de la plantilla de tu bot
+# Estructuras y funciones para programar tu bot
 
 Para que tu implementación pueda interactuar con el EVAB necesitarás saber usar la plantilla que provee, la cual se puede generar usando el comando `./evab plantilla`.
 El uso de la plantilla generada por el programa es obligatoria ya que contiene funciones indispensables para la comunicación entre tu bot y el EVAB.
@@ -59,7 +59,8 @@ No necesitas instanciar un objeto `EvabBotPackage` ya que `evab::BotHandler::get
   };
   ///////////////////////////////////////////
   struct ElementInfo{
-    //Valores de posición y ángulo de dirección (sexagesimal) de tu bot.
+    // Valores de posición y ángulo de dirección (sexagesimal) de tu bot.
+    // Las posiciones x e y representan el extremo superior izquierdo del objeto.
     float x_position, y_position, direction;
     int player_id;
     /*Identificador del jugador en la partida
@@ -68,15 +69,18 @@ No necesitas instanciar un objeto `EvabBotPackage` ya que `evab::BotHandler::get
   };
 ```
 - El método `evab::BotHandler::onBotGameplay()` servirá para dar inicio al bucle de recepción y envío de datos de tu bot al servidor. Dentro de este bucle será donde harás el llamado a las funciones de tu implementación y a los métodos de interacción:
-1. `void BotHandler::onBotActionRotation(const float& rotInDegrees);`
-Representa la dirección a donde está apuntando tu bot en el juego.
-2. `void BotHandler::onBotActionMoving(const bool& enableMoving);`
-Representa que quieres que tu bot avance en la dirección a la que está apuntando.
-3. `void BotHandler::onBotActionAttack(const bool& enableAttack);`
-Representa que quiere que tu bot dispare en la dirección a la que está apuntando.
+
+	1. `void BotHandler::onBotActionRotation(const float& angInDegrees);`
+	Representa la dirección a la que quieres que tu bot apunte en el juego. Se utiliza el sistema de ángulos horario (0 = derecha), (90 = abajo), (180 = izquierda), (270 = arriba).
+	2. `void BotHandler::onBotActionMoving(const bool& enableMoving);`
+	Representa que quieres que tu bot avance en la dirección a la que está apuntando.
+	3. `void BotHandler::onBotActionAttack(const bool& enableAttack);`
+	Representa que quiere que tu bot dispare en la dirección a la que está apuntando.
+
+_Nota_: Revisa la [velocidad de los objetos](considerations#a-qué-velocidad-se-mueven-los-bots-y-las-balas) de EVAB para un mejor entendimiento de la acción de movimiento.
 
 Los llamados de los 3 métodos a la vez no son obligatorios en una iteración de bucle, eso dependerá de lo que tu implementación requiera hacer, ya que `evab::BotHandler::onBotGameplay()` simplemente enviará los datos que tenga guardado actualmente.
-El llamado del segundo método y el tercer método poseen un conflicto mutuo, lo que significa que no podrás llamarlos a ambos en la misma iteración de bucle y solo se ejecutará la acción del primer llamado de cualquiera de ambos métodos mencionados. Y es posible cancelar una de esas acciones simplemente volviendo a llamar al método pero con el parámetro de entrada en `false`.
+El llamado del segundo método y el tercer método poseen un conflicto mutuo, lo que significa que no podrás llamarlos a ambos en la misma iteración de bucle y solo se ejecutará la acción del primer llamado de cualquiera de ambos métodos mencionados. Es posible cancelar una de esas acciones simplemente volviendo a llamar al método pero con el parámetro de entrada en `false`.
 
 ```cpp
   (...)

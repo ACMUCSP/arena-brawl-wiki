@@ -1,5 +1,5 @@
 ---
-title: Instalacion macOS
+title: macOS
 description: Instalar EVAB en macOS Big Sur
 tags:
   - installation
@@ -9,7 +9,7 @@ tags:
 ## Requisitos:
 
 - Apple clang, versión 12.0.0 o posterior.
-- [Homebrew](https://brew.sh/), versión
+- Administrador de paquetes [Homebrew](https://brew.sh/).
 
 Es recomendable instalar las herramientas de linea de comandos de macOS,
 estas se instalan automáticamente junto a Xcode.
