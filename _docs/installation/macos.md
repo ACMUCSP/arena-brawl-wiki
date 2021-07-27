@@ -16,14 +16,14 @@ estas se instalan automáticamente junto a Xcode.
 
 ## Instalación de SFML
 
-Abrir una terminal y ejecutar el siguiente comando:
+Abre una terminal y ejecuta el siguiente comando:
 ```bash
 $ brew install sfml
 ```
 
 ## Ejecución de EVAB
 
-Ahora, descargar el EVAB desde AQUI y dentro de la carpeta EVAB ejecutar el siguiente comando:
+Descarga [EVAB](../../assets/EVAB/EVAB_macos.zip), descomprime el archivo y abre una terminal en la carpeta, finalmente ejecuta el siguiente comando:
   ```bash
   $ ./evab
   ```
