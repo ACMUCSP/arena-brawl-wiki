@@ -26,7 +26,7 @@ Si no tienes instalado los requisitos o tienes versiones diferentes continúa co
 
 ## Ejecución de EVAB
 
-Ahora [descarga](../../assets/EVAB/EVAB_linux_ubuntu&Arch.zip) el "Entorno de Videojuego Arena Brawl (EVAB)" y dentro de la carpeta ARENA_BRAWL_ACM_UCSP ejecuta el siguiente comando:
+Ahora [descarga](../../assets/EVAB/EVAB_linux.zip) el "Entorno de Videojuego Arena Brawl (EVAB)" y dentro de la carpeta ARENA_BRAWL_ACM_UCSP ejecuta el siguiente comando:
 
   ```bash
   $ ./evab jugar
