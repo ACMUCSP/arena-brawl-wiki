@@ -7,26 +7,26 @@ permalink: /event/
 
 ## Formato del torneo
 
-El torneo se divide en 2 etapas que corresponden a 02 fechas, semifinales y finales. 
+El torneo se divide en 2 etapas que corresponden a 02 fechas, clasificatorias y finales. 
 
-#### Etapa semifinales
+#### Etapa clasificatorias
 
-Esta primera fecha de semifinales tiene por objetivo ubicarte en las [Upper o Lower brackets](https://britishesports.org/news/what-are-the-different-tournament-formats-in-esports/)
+Esta primera fecha de clasificatorias tiene por objetivo ubicarte en las [Upper o Lower brackets](https://britishesports.org/news/what-are-the-different-tournament-formats-in-esports/)
  de la etapa final. Todos los equipos
 pasan a la etapa final pero según tu resultado irás a diferente bracket.
-Para las batallas de semifinales agruparemos de forma aleatoria a todos los equipos en grupos.
+Para las batallas de clasificatorias agruparemos de forma aleatoria a todos los equipos en grupos.
 Estos grupos estarán conformados de mínimo 02 equipos y máximo de 10. La cantidad de grupos viene determinada de la siguiente forma:
 
 ```cpp
-int CantidadGrupos(int equipos) {
+double CantidadGrupos(int equipos) {
   if (equipos >= 1 && equipos <= 10) return 2;
-  if (equipos > 10) return static_cast<int>(ceil(equipos/10));
+  if (equipos > 10) return ceil(equipos/10);
 }
 ```
 
-La etapa de semifinales tiene la siguiente agenda:
+La etapa de clasificatorias tiene la siguiente agenda:
 
-|                                       Agenda de semifinales                                                      |
+|                                       Agenda de clasificatorias                                                  |
 |:-----------------------------------:|:--------------------------------------------------------------------------:|
 | I.   Compilación de bots            |         Según cantidad de equipos                                          |
 | II.  Configuración de bots          |         15 minutos.                                                        |
@@ -35,14 +35,14 @@ La etapa de semifinales tiene la siguiente agenda:
 | V.   Segunda ronda                  |         Mínimo 01 batalla por participante y máximo 10 batallas.           |
 
 Es nuestro objetivo que como mínimo tengas una batalla por ronda, pero es posible que te enfrentes a más. Si se da el caso, la suma de todos
-tus resultados (de primera y segunda ronda) determinarán tu bracket en la etapa final. También debes saber que todas las batallas de semifinales
+tus resultados (de primera y segunda ronda) determinarán tu bracket en la etapa final. También debes saber que todas las batallas de clasificatorias
 se formarán aleatoriamente.
 
 La cantidad de batallas por ronda que tendrás se determinará de la siguiente manera:
 
 ```cpp
-int CantidadDeBatallasPorRonda(int grupos) {
-  return static_cast<int>(floor( 20 / (grupos * 2)));
+double CantidadDeBatallasPorRonda(int grupos) {
+  return floor(20/(grupos*2));
 }
 ```
 
@@ -71,17 +71,15 @@ Según si estás ubicado en las Upper o Lower brackets, cada batalla se determin
 Para determinar cuántos grupos por brackets habrá, se utilizará la siguiente fórmula:
 
 ```cpp
-int CantidadGruposUpperB(int equipos) {
+double CantidadGruposUpperB(int equipos) {
   if (equipos >= 1 && equipos <= 3) return 1;
   if (equipos > 3 && equipos <= 10) return 2;
-  if (equipos > 10) return static_cast<int>(ceil(equipos/10));
-  else exit (EXIT_FAILURE);
+  if (equipos > 10) return ceil(equipos/10);
 }
 
-int CantidadGruposLowerB(int equipos) {
+double CantidadGruposLowerB(int equipos) {
   if (equipos >= 1 && equipos <= 10) return 1;
-  if (equipos > 10) return static_cast<int>(ceil(equipos/10));
-  else exit (EXIT_FAILURE);
+  if (equipos > 10) return ceil(equipos/10);
 }
 ```
 
