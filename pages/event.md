@@ -7,98 +7,111 @@ permalink: /event/
 
 ## Formato del torneo
 
-El torneo se divide en 2 etapas que corresponde a 02 fechas, semifinales y finales. 
+El torneo se divide en 2 etapas que corresponden a 02 fechas, clasificatorias y finales. 
 
-#### Etapa semifinales
+#### Etapa clasificatorias
 
-Esta primera fecha de semifinales tiene por objetivo ubicarte en las llaves mayores o menores de la etapa final. Todos los equipos
-pasan a la etapa final pero según tu resultado irás a diferente llave.
-Para las batallas de semifinales agruparemos de forma aleatoria a todos los equipos en grupos.
+Esta primera fecha de clasificatorias tiene por objetivo ubicarte en las [Upper o Lower brackets](https://britishesports.org/news/what-are-the-different-tournament-formats-in-esports/)
+ de la etapa final. Todos los equipos
+pasan a la etapa final pero según tu resultado irás a diferente bracket.
+Para las batallas de clasificatorias agruparemos de forma aleatoria a todos los equipos en grupos.
 Estos grupos estarán conformados de mínimo 02 equipos y máximo de 10. La cantidad de grupos viene determinada de la siguiente forma:
 
 ```cpp
-// Fórmula para determinar la cantidad de grupos.
-// n = cantidad de equipos.
-
-if | 1 <= n <= 10;   grupos = 2
-   | n > 10;         grupos = techo(n/10)
-
+double CantidadGrupos(int equipos) {
+  if (equipos >= 1 && equipos <= 10) return 2;
+  if (equipos > 10) return ceil(equipos/10);
+}
 ```
 
-La etapa de semifinales tiene la siguiente agenda:
+La etapa de clasificatorias tiene la siguiente agenda:
 
-|                                       Agenda de semifinales                                                      |
+|                                       Agenda de clasificatorias                                                  |
 |:-----------------------------------:|:--------------------------------------------------------------------------:|
-| I.   Ronda de test                  |         mínimo 01 batalla por participante y máximo 02.                    |
-| II.  Ajustes de bots                |         15 minutos.                                                        |
-| III. Primera ronda                  |         mínimo 01 batalla por participante y máximo 10 batallas.           |
-| IV.  Ajustes de bots                |         15 minutos.                                                        |
-| V.   Segunda ronda                  |         mínimo 01 batalla por participante y máximo 10 batallas.           |
+| I.   Compilación de bots            |         Según cantidad de equipos                                          |
+| II.  Configuración de bots          |         15 minutos.                                                        |
+| III. Primera ronda                  |         Mínimo 01 batalla por participante y máximo 10 batallas.           |
+| IV.  Configuración de bots          |         15 minutos.                                                        |
+| V.   Segunda ronda                  |         Mínimo 01 batalla por participante y máximo 10 batallas.           |
 
-Es nuestro objetivo que mínimamente tengas una batalla por ronda, pero es posible que te enfrentes a más. Si se da el caso, la suma de todos
-tus resultados (de primera y segunda ronda) determinarán tu llave en la etapa final. También debes saber que todas las batallas de semifinales
-se formarán de forma aleatoria.
+Es nuestro objetivo que como mínimo tengas una batalla por ronda, pero es posible que te enfrentes a más. Si se da el caso, la suma de todos
+tus resultados (de primera y segunda ronda) determinarán tu bracket en la etapa final. También debes saber que todas las batallas de clasificatorias
+se formarán aleatoriamente.
 
-Sabemos que es posible que te enfrentes por primera vez con otros bots, por eso
-proponemos una "Ronda de test", esta solo servirá para que te des cuenta que todo anda bien con tu bot. ¿Y si no?,
-tendrás un tiempo de 15 minutos, de "Ajuste de bots", para que soluciones tu problema. El segundo momento de "Ajuste de bots" úsalo 
-estratégicamente.
-
-¿Cuáles equipos pasarán a las llaves mayores y menores?
+La cantidad de batallas por ronda que tendrás se determinará de la siguiente manera:
 
 ```cpp
-// n = cantidad de equipos.
-
-Llaves mayores  <--  Los techo(n/2) equipos con mayor puntaje acumulado de todas sus batallas de semifinales (primera y segunda ronda).
-Llaves menores  <--  Los piso(n/2) equipos con menor puntaje acumulado de todas sus batallas de semifinales (primera y segunda ronda).
+double CantidadDeBatallasPorRonda(int grupos) {
+  return floor(20/(grupos*2));
+}
 ```
+
+"Compilación de bots" es el momento donde compilaremos todos los bots en el servidor donde se ejecutará el evento. 
+Después de este momento, tendrás 15 minutos si acaso tuviste algún problema. Luego, empieza la "Primera ronda".
+El segundo momento de "Configuración de bots" úsalo estratégicamente.
+
+¿Qué equipos pasarán a las Upper y Lower brackets?
+
+```cpp
+void LowerAndUpperBrackets(int equipos) {
+  std::cout << "Upper brackets: " << ceil(equipos/2) << "equipos con mayor puntaje" << std::endl;
+  std::cout << "Lower brackets: " << floor(equipos/2) << "equipos con menor puntaje"<< std::endl;
+}
+```
+
+Ejemplo:
+
+![../assets/img/ClasificatoriasAB.png](../assets/img/ClasificatoriasAB.png)
 
 #### Etapa finales
 
 En esta segunda fecha de finales se determinará al ganador del Arena Brawl. 
-Según si estás ubicado en las llaves mayores o menores, cada batalla se determinará al mejor de 3 en caso de llaves mayores, al mejor de 1 en
-caso de llaves menores.
+Según si estás ubicado en las Upper o Lower brackets, cada batalla se determinará [BO3](https://blog.sportkeepers.com/que-significa-bo1-bo3-y-bo5-en-esports/) en caso de Upper Brackets y [BO1](https://blog.sportkeepers.com/que-significa-bo1-bo3-y-bo5-en-esports/) para las Lower Brackets.
 
-Para determinar cuántos grupos en las llaves habrá se utilizará la siguiente fórmula:
+Para determinar cuántos grupos por brackets habrá, se utilizará la siguiente fórmula:
 
 ```cpp
-// n = cantidad de equipos.
-// Determinar grupos en llaves mayores.
+double CantidadGruposUpperB(int equipos) {
+  if (equipos >= 1 && equipos <= 3) return 1;
+  if (equipos > 3 && equipos <= 10) return 2;
+  if (equipos > 10) return ceil(equipos/10);
+}
 
-if | 1 <= n <= 10;   grupos = 2
-   | n > 10;         grupos = techo(n/10)
-
-// Determinar grupos en llaves menores.
-
-if | 1 <= n <= 10;   grupos = 1
-   | n > 10;         grupos = techo(n/10)
-
+double CantidadGruposLowerB(int equipos) {
+  if (equipos >= 1 && equipos <= 10) return 1;
+  if (equipos > 10) return ceil(equipos/10);
+}
 ```
 
 Los ganadores de cada batalla se determinará de la siguiente forma:
 
 ```cpp
-// n = cantidad de equipos.
-
-Ganadores   <--  Los techo(n/2) equipos con mayor puntaje por batalla (la batalla puede ser MD3 o MD1).
-Perdedores  <--  Los piso(n/2) equipos con menor puntaje por batalla (la batalla puede ser MD3 o MD1).
+void GanadoresYPerdedores(int equipos) {
+  std::cout << "Ganador(es): " << ceil(equipos/2) << std::endl;
+  std::cout << "Perdedor(es): " << floor(equipos/2) << std::endl;
+}
 ```
 
 Esta fecha de finales se divide en fases y en cada fase tendremos:
 
- - *Llaves mayores*, ganadores pasan a la siguiente fase y perdedores pasan a llaves menores.
- - *Llaves menores*, ganadores pasan a la siguiente fase de llaves menores y perdedores son eliminados.
+ - *Upper brackets*, donde los ganadores pasan a la siguiente fase y los perdedores pasan a Lower brackets.
+ - *Lower brackets*, donde los ganadores pasan a la siguiente fase de Lower brackets y los perdedores son eliminados.
 
-La cantidad de fases dependerá de los grupos y la eliminación sucesiva para finalmente dar paso a la batalla final que será 1 vs 1.
+La cantidad de fases dependerá del número de equipos, los cuales batallarán hasta llegar a la fase final que será 1 vs 1 (modalidad [BO5](https://blog.sportkeepers.com/que-significa-bo1-bo3-y-bo5-en-esports/)).
+
+Ejemplo:
+
+![../assets/img/FinalesAB.png](../assets/img/FinalesAB.png)
 
 ## Puntaje obtenido por batalla
 
-Estos puntajes te serán otorgados una vez acabe la batalla y determinará tu posición, asegúrate de entenderlos bien.
+Estos puntajes te serán otorgados una vez acabe la batalla y determinará tu posición. En caso de que la batalla sea BO3 o BO5, el puntaje final que determina tu posición será
+la suma acumulada por batalla.
 
 |                    Suceso                    | Bonificación en puntos |
 |:--------------------------------------------:|:----------------------:|
 | Mantenerte vivo hasta el final de la batalla.|        1,000,000       |
-| Por cada naves destrozadas.                  |         100,000        |
-| Por cada vidas restante.                     |         10,000         |
+| Por cada nave destrozada.                    |         100,000        |
+| Por cada vida restante.                      |         10,000         |
 | Por cada munición restante.                  |           10           |
 | Por destrozar primero a una nave.            |            1           |

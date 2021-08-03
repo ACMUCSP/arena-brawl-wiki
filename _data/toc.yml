@@ -26,7 +26,12 @@
           url: "docs/guides/structs"
         - title: FAQ
           url: "docs/guides/considerations"
-    - title: "Competencia"
+    - title: "Formato del torneo"
       url: "event"
+    - title: "Torneos Arena Brawl"
+      url: "docs/torneos/ab21"
+      children:
+        - title: Arena Brawl 2021
+          url: "docs/torneos/ab21"
     - title: "Noticias"
       url: "news"
