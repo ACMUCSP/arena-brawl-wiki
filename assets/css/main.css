@@ -5481,7 +5481,7 @@ input[type=button].btn-block {
 
 .card-footer {
     padding: .75rem 1.25rem;
-    background-color: rgba(0, 0, 0, .03);
+    background-color: rgba(0, 0, 0, 0.397);
     border-top: 1px solid rgba(0, 0, 0, .125)
 }
 
@@ -7468,7 +7468,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-    background-color: #000!important
+    background-color: #323437!important /*FOOTER COLOR BACKGROUND*/
 }
 
 a.bg-dark:hover,

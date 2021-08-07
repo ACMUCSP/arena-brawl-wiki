@@ -16,6 +16,11 @@ github_user: "ACMUCSP"
 github_repo: "arena-brawl-wiki"
 github_branch: "master"
 
+facebook: "UCSPACM"
+instagram: "ucsp_acm" 
+youtube: "channel/UCeSLZcwdzf_36l7gOlCYL9A"
+email: "acm@ucsp.edu.pe"
+
 # Should there be feedback buttons at the bottom of pages?
 feedback: true
 

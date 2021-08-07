@@ -2,35 +2,54 @@
   <div class="container-fluid mx-sm-5">
     <div class="row">
       <div class="col-6 col-sm-4 text-xs-center order-sm-2">
-        
-<ul class="list-inline mb-0">  
-  {% if site.twitter %}
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Twitter" data-original-title="Twitter">
-    <a class="text-white" target="_blank" href="https://twitter.com/{{ site.twitter }}">
-      <i class="fab fa-twitter"></i>
-    </a>
-  </li>{% endif %}
-  {% if site.linkedin %}
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="LinkedIn" data-original-title="LinkedIn">
-    <a class="text-white" target="_blank" href="https://linkedin.com/in/{{ site.linkedin }}">
-      <i class="fab fa-linkedin"></i>
-    </a>
-  </li>{% endif %}
-</ul>
-</div>
-<div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
-<ul class="list-inline mb-0">  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="GitHub" data-original-title="GitHub">
-    <a class="text-white" target="_blank" href="{{ site.repo }}">
-      <i class="fab fa-github"></i>
-    </a>
-  </li>
-</ul>
-</div>
-<div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-  <small class="text-white">© 2021 {{ site.author }} All Rights Reserved</small>
-  {% if site.privacy %}<small class="ml-1"><a href="{{ site.privacy }}" target="_blank">Privacy Policy</a></small>{% endif %}
-  <p class="mt-2"><a href="/about/">About Docsy</a></p>	
+
+        <ul class="list-inline mb-0">
+
+
+          {%- if site.facebook -%}
+          <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="facebook"
+            data-original-title="Twitter">
+            <a class="text-white" target="_blank" href="https://facebook.com/{{ site.facebook }}">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          {% endif %}
+
+          {%- if site.instagram -%}
+          <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="instagram"
+            data-original-title="instagram">
+            <a class="text-white" target="_blank" href="https://instagram.com/{{ site.instagram }}">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          {% endif %}
+
+          {%- if site.youtube -%}
+          <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="youtube"
+            data-original-title="youtube">
+            <a class="text-white" target="_blank" href="https://youtube.com/{{ site.youtube }}">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          {% endif %}
+
+        </ul>
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="GitHub"
+            data-original-title="GitHub">
+            <a class="text-white" target="_blank" href="{{ site.repo }}">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">© 2021 {{ site.author }} All Rights Reserved</small>
+        {% if site.privacy %}<small class="ml-1"><a href="{{ site.privacy }}" target="_blank">Privacy
+            Policy</a></small>{% endif %}
+        <p class="mt-2"><a href="/about/">About Docs</a></p>
       </div>
     </div>
   </div>
