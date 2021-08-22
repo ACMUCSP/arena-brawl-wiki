@@ -14,7 +14,7 @@ tags:
 
 Si no tuvieras el requisito de gcc 10.3.0 sigue los siguientes pasos, sino salta a la parte de "Ejecución de EVAB".
 
-- Descarga el siguiente archivo, que es el instalador de MSYS, [descargar](../../assets/MSYS/msys2-x86_64-20210725.exe)
+- Primero descargaremos MSYS desde su [página oficial](https://www.msys2.org/)
 - Instala el archivo descargado (msys2-x86_64-20210725.exe).
 - Ejecuta el programa "MSYS2 MSYS" (es el que acabas de instalar).
 - Deberías tener algo como esta imagen:
