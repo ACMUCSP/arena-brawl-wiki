@@ -8,37 +8,43 @@ tags:
 
 ## Requisitos:
 
-- SFML, Versión 2.5.1
-- CMake, Versión 3.15 o posterior
-- Compilador MinGW (g++)
+- Compilador MinGW GCC 10.3.0 (Built by MSYS2 project)
 
-## Instalación de SFML
+## Instalación de C++ 10.3.0
 
-- Crear una carpeta temporal para realizar la compilación de la librería SFML
-- Ejecutar el siguiente comando en la carpeta creada:
+Si no tuvieras el requisito de gcc 10.3.0 sigue los siguientes pasos, sino salta a la parte de "Ejecución de EVAB".
+
+- Primero descargaremos MSYS desde su [página oficial](https://www.msys2.org/)
+- Instala el archivo descargado (msys2-x86_64-20210725.exe).
+- Ejecuta el programa "MSYS2 MSYS" (es el que acabas de instalar).
+- Deberías tener algo como esta imagen:
+![MSYS2 MSYS](../../assets/img/msys.jpg)
+- Ahora ejecuta el siguiente comando:
   ```bash
-  $ git clone https://github.com/SFML/SFML.git
+  $ pacman -S mingw-w64-x86_64-gcc
   ```
-- Una vez que el proceso de descarga termine, deberá construir el proyecto de la librería con cmake en una carpeta build que deberá crear;
-  luego, en la misma carpeta donde se encuentra el archivo CMakeLists.txt de SFML ejecute el siguiente comando:
+![MSYS2 MSYS2](../../assets/img/msys2.jpg)
+- Te pedirá confirmar la instalación, escribe "y" y dale enter.
+- Ahora debes agregar al path del sistema "C:\msys64\mingw64\bin". En caso hayas elegido otra ubicación de instalación del "MSYS2 MSYS", entonces coloca la ubicación al bin de mingw64 en el path. ("tu_ubicación_de_instalación\mingw64\bin")
+- Ahora vamos a confirmar que hemos instalado la version de c++ 10.3.0 correctamente abriendo
+un "Símbolo de sistema" o "Command Prompt" (según tu idioma). Ejecuta el siguiente comando.
   ```bash
-  $ cmake -G "MinGW Makefiles" -B build
+  $ c++ --version
   ```
-- Ahora, vaya a la carpeta build y ejecute este último comando:
-  ```bash
-  $ mingw32-make install
-  ```
-  Esto instalará la librería SFML en el disco donde su sistema instala programas. 
-  La librería es fácilmente removible simplemente eliminando la carpeta donde se instaló SFML. 
-  Normalmente es en `C://Program-Files(x86)/SFML`
+Deberías ver algo así. En caso no, vuelve a hacer los pasos nuevamente o contáctanos para ayudarte.
+![C++ version](../../assets/img/c++version.jpg)
 
 ## Ejecución de EVAB
 
 EVAB es portable, así que no requiere un procedimiento de instalación pero sí debe tomar en cuenta que los archivos de los bots participantes
-se compilan cuando ejecute EVAB, lo cual hace que deba especificar las carpetas include y lib de su SFML instalado para hacerlo. 
-Para descargar EVAB use el siguiente [enlace](../../assets/EVAB/EVAB_Win64.zip).
-En la raíz de EVAB encontrará un archivo llamado `CompilationSettings.conf` con dos unicos campos: `INCLUDE_PATH` y `LIB_PATH`,
-en los cuales deberá colocar las rutas a las carpetas include y lib de su SFML instalado si es que se instaló en otra ruta que no sea `C://Program-Files(x86)/SFML`. 
-Ambas carpetas las encontrará en la raíz de su SFML y señaladas con los nombres include y lib respectivamente.
+se compilan cuando ejecute EVAB. 
+Para descargar EVAB usa el siguiente [enlace](../../assets/EVAB/EVAB_Win64.zip).<br>
+Habrás descargado un archivo .zip el cual debes descomprimir. Al descomprimir verás la carpeta "EVAB", ingresa en él. Ahora abre un "Símbolo de sistema" en esta ubicación y ejecuta:
+  ```bash
+  $ evab.exe jugar
+  ```
+Ahora elige un número cualquiera entre 2 y 10. Dale enter y deberías ver un juego ejecutándose automáticamente. Quizá te pida un permiso de firewall, simplemente dale permitir.
 
-Ahora sí puede ejecutar EVAB y probar su bot.
+![EVAB exec](../../assets/img/exec.jpg)
+
+Ahora ve a "Guías" a aprender los demás comandos y empezar a programar tu bot.

@@ -12,17 +12,32 @@ tags:
 La linea de comandos de EVAB te permite crear, compilar y ejecutar tus bots.
 
 ```bash
-Bienvenido a EVAB v1.0
-
+   █████╗ ██████╗ ███████╗███╗   ██╗ █████╗
+  ██╔══██╗██╔══██╗██╔════╝████╗  ██║██╔══██╗
+  ███████║██████╔╝█████╗  ██╔██╗ ██║███████║
+  ██╔══██║██╔══██╗██╔══╝  ██║╚██╗██║██╔══██║
+  ██║  ██║██║  ██║███████╗██║ ╚████║██║  ██║
+  ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝
+  ██████╗ ██████╗  █████╗ ██╗    ██╗██╗
+  ██╔══██╗██╔══██╗██╔══██╗██║    ██║██║
+  ██████╔╝██████╔╝███████║██║ █╗ ██║██║
+  ██╔══██╗██╔══██╗██╔══██║██║███╗██║██║
+  ██████╔╝██║  ██║██║  ██║╚███╔███╔╝███████╗
+  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚══════╝
+        ██╗   ██╗     ██╗        ████╗
+        ██║   ██║    ███║      ██║   ██║
+        ╚██╗ ██╔╝     ██║      ██║   ██║
+          ╚██╔╝      ██║██╗ ██  ╚████╔═╝
+           ╚═╝       ╚═╝╚═╝      ╚═══╝
   Entorno de Videojuego de Arena Brawl 2021
 
 Uso: evab COMANDO
 
 Opciones:
-  ayuda		Muestra este mensaje
-  compilar	Compila tu bot sin inicializar el juego
-  jugar		Comienza el juego Arena Brawl
-  plantilla	Crea una plantilla de código en la carpeta 'bots'
+  ayuda         Muestra este mensaje
+  compilar      Compila tu bot sin inicializar el juego
+  jugar         Comienza el juego Arena Brawl
+  plantilla     Crea una plantilla de codigo en la carpeta 'bots'
 ```
 
 ## Generar plantilla
