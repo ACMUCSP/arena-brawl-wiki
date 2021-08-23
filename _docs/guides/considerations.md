@@ -28,7 +28,7 @@ enemigos probablemente se movieron en las 9 rondas que tu bot se mantuvo inactiv
 
 ### ¿A qué velocidad se mueven los bots y las balas?
 
-Las dimensiones de los objetos en EVAB son las siguientes (_ancho x alto_ en unidades):
+Antes de conocer la velocidad de los objetos en EVAB, es importante conocer sus dimensiones. Las cuáles son las siguientes (_ancho x alto_ en unidades):
 - Espacio: _1000 x 1000_
 - Nave: _25 x 26_
 - Bala: _20 x 10_
@@ -45,7 +45,7 @@ Por ejemplo, si un bot se encuentra en la posición **(x, y)**, y realiza las ac
 Su posición para la próxima iteración será **(x, y + 10)**, es decir, descenderá 10 unidades.
 
 Es muy importante conocer fundamentos trigonométricos para hallar las distancias y ángulos entre objetos para predecir sus trayectorias y realizar rotaciones.
-Para ello es totalmente valido el uso de la librería `math.h` de STL.
+Para ello, es totalmente válido el uso de la librería `math.h` de STL.
 
 ### ¿Puedo modificar los valores que recibo en `EVAB::EvabBotPackage`?
 

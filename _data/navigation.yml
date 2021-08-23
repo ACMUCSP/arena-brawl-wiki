@@ -1,6 +1,6 @@
 - title: ACM UCSP
-  url: "https://ucsp.acm.org/"
+  external_url: "https://ucsp.acm.org/"
 - title: Arena Brawl 2021
-  url: event
+  url: docs/torneos/ab21
 - title: Documentación
   url: docs
