@@ -25,6 +25,7 @@ Si no tuvieras el requisito de gcc 10.3.0 sigue los siguientes pasos, sino salta
   ```
 ![MSYS2 MSYS2](../../assets/img/msys2.jpg)
 - Te pedirá confirmar la instalación, escribe "y" y dale enter.
+- Ahora debes agregar al path del sistema "C:\msys64\mingw64\bin". En caso hayas elegido otra ubicación de instalación del "MSYS2 MSYS", entonces coloca la ubicación al bin de mingw64 en el path. ("tu_ubicación_de_instalación\mingw64\bin")
 - Ahora vamos a confirmar que hemos instalado la version de c++ 10.3.0 correctamente abriendo
 un "Símbolo de sistema" o "Command Prompt" (según tu idioma). Ejecuta el siguiente comando.
   ```bash
@@ -38,11 +39,11 @@ Deberías ver algo así. En caso no, vuelve a hacer los pasos nuevamente o cont�
 EVAB es portable, así que no requiere un procedimiento de instalación pero sí debe tomar en cuenta que los archivos de los bots participantes
 se compilan cuando ejecute EVAB. 
 Para descargar EVAB usa el siguiente [enlace](../../assets/EVAB/EVAB_Win64.zip).<br>
-Habrás descargado un archivo .zip el cual debes descomprimir. Al descomprimir verás la carpeta "EVAB", ingresa en él. Ahora abre un "Símbolo de sistema" con esta ubicación y ejecuta:
+Habrás descargado un archivo .zip el cual debes descomprimir. Al descomprimir verás la carpeta "EVAB", ingresa en él. Ahora abre un "Símbolo de sistema" en esta ubicación y ejecuta:
   ```bash
   $ evab.exe jugar
   ```
-Ahora elige un número cualquiera entre 2 y 10. Dale enter y deberías ver un juego ejecutándose automáticamente.
+Ahora elige un número cualquiera entre 2 y 10. Dale enter y deberías ver un juego ejecutándose automáticamente. Quizá te pida un permiso de firewall, simplemente dale permitir.
 
 ![EVAB exec](../../assets/img/exec.jpg)
 
