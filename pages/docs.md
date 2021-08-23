@@ -6,7 +6,7 @@ permalink: /docs/
 
 # Documentación
 
-Bienvenidos a la documentación de {{ site.title }}! Aqui encontraras las secciones:
+Bienvenidos a la documentación de {{ site.title }}! Aquí encontrarás las secciones:
 
 <div class="section-index">
     <hr class="panel-line">

@@ -1,6 +1,6 @@
 ---
-title: Instalacion
-description: Como instalar EVAB de acuerdo a tu sistema operativo
+title: Instalación
+description: Cómo instalar EVAB de acuerdo a tu sistema operativo
 index: True
 ---
 
