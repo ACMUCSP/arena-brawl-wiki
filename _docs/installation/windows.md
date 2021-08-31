@@ -39,11 +39,13 @@ Deberías ver algo así. En caso no, vuelve a hacer los pasos nuevamente o cont�
 EVAB es portable, así que no requiere un procedimiento de instalación pero sí debe tomar en cuenta que los archivos de los bots participantes
 se compilan cuando ejecute EVAB. 
 Para descargar EVAB usa el siguiente [enlace](../../assets/EVAB/EVAB_Win64.zip).<br>
-Habrás descargado un archivo .zip el cual debes descomprimir. Al descomprimir verás la carpeta "EVAB", ingresa en él. Ahora abre un "Símbolo de sistema" en esta ubicación y ejecuta:
+Habrás descargado el archivo `EVAB_Win64.zip` el cual debes descomprimir. Al descomprimir verás la carpeta `EVAB`, ingresa en él. <br>
+Ahora verás una carpeta con el nombre `SFML`, esta carpeta debes copiarla en esta ubicación: `C:\Program Files (x86)\`. (Seguramente te pedirá que accedas como administrador, dale aceptar, [SFML](https://www.sfml-dev.org/) es un framework que utiliza EVAB y es confiable). <br>
+Ahora abre un "Símbolo de sistema" en esta ubicación y ejecuta:
   ```bash
   $ evab.exe jugar
   ```
-Ahora elige un número cualquiera entre 2 y 10. Dale enter y deberías ver un juego ejecutándose automáticamente. Quizá te pida un permiso de firewall, simplemente dale permitir.
+Ahora elige un número cualquiera entre 2 y 10. Dale enter y deberías ver una batalla ejecutándose automáticamente. Quizá te pida un permiso de firewall, dale permitir.
 
 ![EVAB exec](../../assets/img/exec.jpg)
 
