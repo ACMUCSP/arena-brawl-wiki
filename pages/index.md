@@ -13,8 +13,8 @@ permalink: /
 
 ## ¿Qué es Arena Brawl?
 
-Arena Brawl es una competición de programación de bots. Cada equipo debe programar su bot para que se desenvuelva autónomamente durante
-las batallas de Arena Brawl. Para esto, debes poner en práctica todos tus conocimientos sobre programación y proponer excelente estrategias. Los equipos son libres de decidir cómo programar 
+Arena Brawl es una competición de programación de videojuegos. Cada equipo debe programar su bot para que se desenvuelva autónomamente durante
+las batallas de Arena Brawl. Para esto, debes poner en práctica todos tus conocimientos sobre programación y proponer excelentes estrategias/heurísticas. Los equipos son libres de decidir cómo programar 
 sus bots siempre que sigan las reglas del concurso. 
 El objetivo es destrozar las naves enemigas para ser el último en pantalla. Y si hay más de un bot en pantalla, tus vidas restantes, uso
 eficiente de las 120 balas otorgadas y haber hecho el primer destrozo te avalarán para pasar a la siguiente fase.
